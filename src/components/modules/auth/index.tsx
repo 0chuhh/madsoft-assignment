@@ -67,7 +67,7 @@ export const Authorization = () => {
             placeholder="Введите пароль"
             helperText={error}
           />
-          <CustomButton type="submit" variant="contained">Войти</CustomButton>
+          <CustomButton type="submit" variant="primary">Войти</CustomButton>
         </form>
       </Card>
     </div>
