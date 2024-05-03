@@ -3,13 +3,21 @@ import { FC } from 'react';
 import styles from './styles.module.scss';
 import React from 'react';
 
-export interface ICustomButtonProps extends ButtonProps { }
+const Variant:{[key:string]:string} = {
+    primary: styles.primary,
+    secondary: styles.secondary
+}
 
-export const CustomButton: FC<ICustomButtonProps> = React.memo(({ children, ...restProps }) => {
+export interface ICustomButtonProps extends Omit<ButtonProps, 'variant'> {
+    variant?: keyof typeof Variant
+ }
+
+export const CustomButton: FC<ICustomButtonProps> = React.memo(({ variant='primary', children, ...restProps }) => {
     return (
         <Button
             {...restProps}
-            className={[restProps.className, styles.button].join(' ')}
+            className={[restProps.className, Variant[variant]].join(' ')}
+            sx={{color:'#fff', fontFamily:'inherit'}}
         >
             {children}
         </Button>

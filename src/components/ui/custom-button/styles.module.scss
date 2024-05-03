@@ -1,3 +1,23 @@
 .button {
+    border-radius: 20px !important;
+    transition: all .3s ease !important;
+    &:hover {
+        filter: hue-rotate(20deg);
+    }
+}
+
+.primary {
+    @extend .button;
     background-color: $primary-color !important;
+}
+
+.secondary {
+    @extend .button;
+    border: solid 1px $primary-color !important;
+    color: $primary-color !important;
+
+    &:hover {
+        background-color: $primary-color !important;
+        color:#fff !important
+    }
 }
