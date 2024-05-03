@@ -1,6 +1,7 @@
 .button {
     border-radius: 20px !important;
     transition: all .3s ease !important;
+    padding: 5px 20px !important;
     &:hover {
         filter: hue-rotate(20deg);
     }
