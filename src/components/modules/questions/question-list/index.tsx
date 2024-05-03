@@ -43,7 +43,7 @@ export const QuestionList = forwardRef<RefQuestionPagination, IQuestionListProps
     }));
 
     return questions.length && (
-        <Grid item>
+        <Grid item sm={12}>
 
             <Question question={questions[page]} />
             {/* =============pagination======== */}
